@@ -13,6 +13,7 @@ public class QuestSwitch {
             double tNilai;
             double rRata;
             double rRIPK;
+            String predikat;
 
         System.out.println("masukkan nilai struktur data:");
             sData = nScan.nextInt();
@@ -33,6 +34,25 @@ public class QuestSwitch {
             rRata = tNilai / 5.0;
             rRIPK = rRata / 100 * 4;
             System.out.println("total nilai adalah: " + tNilai);
+
+             if (rRIPK >= 3.75) {
+                predikat = "A (Sangat Baik)";
+            } 
+            else if (rRIPK >= 3.50) {
+                predikat = "AB (Baik Sekali)";
+            } 
+            else if (rRIPK >= 3.00) {
+                predikat = "B (Baik)";
+            } 
+            else if (rRIPK >= 2.50) {
+                predikat = "BC (Cukup)";
+            } 
+            else {
+                predikat = "C (Kurang)";
+            }
+
+            System.out.println("predikat nilai adalah: " + predikat);
+            System.out.println("rata-rata IPK nilai adalah: " + rRIPK);
         
     }
 }
